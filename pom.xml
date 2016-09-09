@@ -66,11 +66,6 @@
             <artifactId>dropwizard-hibernate</artifactId>
             <version>0.6.2</version>
         </dependency>
-        <dependency>
-            <groupId>com.enigmabridge</groupId>
-            <artifactId>hibernate4-sqlite-dialect</artifactId>
-            <version>0.1.2</version>
-        </dependency>
     </dependencies>
     <build>
         <plugins>

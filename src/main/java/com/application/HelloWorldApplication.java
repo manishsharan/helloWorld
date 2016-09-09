@@ -28,7 +28,7 @@ public class HelloWorldApplication extends Service<HelloWorldConfiguration> {
     }
 
     public void initialize(Bootstrap<HelloWorldConfiguration> bootstrap) {
-        //bootstrap.addBundle(hibernateBundle);
+        bootstrap.addBundle(hibernateBundle);
         bootstrap.setName("application-world");
     }
 

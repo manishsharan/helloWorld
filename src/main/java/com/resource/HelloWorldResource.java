@@ -28,16 +28,7 @@ public class HelloWorldResource {
 
     @GET
     public Response sayHello() {
-        Response.status(Response.Status.OK).entity(Joiner.on(",").join(template, helloWorldConfiguration.getDefaultName())).build();
-        Connection c = null;
-        try {
-            Class.forName("org.sqlite.JDBC");
-            c = DriverManager.getConnection("jdbc:sqlite:test.db");
-        } catch ( Exception e ) {
-            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-            System.exit(0);
-        }
-        System.out.println("Opened database successfully");
-        return null;
+        return Response.status(Response.Status.OK).entity(Joiner.on(",").join(template, helloWorldConfiguration.getDefaultName())).build();
+
     }
 }

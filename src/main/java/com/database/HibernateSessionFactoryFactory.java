@@ -20,7 +20,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.sql.DataSource;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.SortedSet;
@@ -37,9 +36,6 @@ public class HibernateSessionFactoryFactory extends SessionFactoryFactory {
                                 DatabaseConfiguration dbConfig,
                                 List<Class<?>> entities) throws ClassNotFoundException {
         final ManagedDataSource dataSource = dataSourceFactory.build(dbConfig);
-        Map<String,String> s = new HashMap<String, String>();
-        s.put("hibernate.dialect","com.enigmabridge.hibernate.dialect.SQLiteDialect");
-        dbConfig.setProperties(s);
         final ConnectionProvider provider = buildConnectionProvider(dataSource,
                 dbConfig.getProperties());
         final SessionFactory factory = buildSessionFactory(dbConfig,
