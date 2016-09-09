@@ -6,7 +6,7 @@ import lombok.*;
 import javax.persistence.*;
 
 /**
- * Created by manish.sharan on 10/09/16.
+ * Created by manish.sharan on 10/09/16
  */
 @JsonSnakeCase
 @Getter
@@ -20,7 +20,7 @@ public class Test1 {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Double id;
+    private int id;
 
     @Column(name = "name")
     private String name;
