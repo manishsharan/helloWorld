@@ -1,7 +1,6 @@
 package com.dao;
 
 import com.database.model.Test1;
-import com.google.common.collect.Lists;
 import com.yammer.dropwizard.hibernate.AbstractDAO;
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
@@ -9,7 +8,7 @@ import org.hibernate.SessionFactory;
 import java.util.List;
 
 /**
- * Created by manish.sharan on 10/09/16.
+ * Created by manish.sharan on 10/09/16
  */
 public class HelloWorldDAO extends AbstractDAO<Test1> {
 
